@@ -58,7 +58,7 @@ public class ConsoleRegexTurtle {
         SimpleConfig simpleConfiguration = new SimpleConfig();
 
         //Set defaults for commandline parameters
-        simpleConfiguration.datasetName = "./dataset.json"; // -d
+        simpleConfiguration.datasetName = "D:\\Users\\Juan Carlos\\Documents\\Proyectos\\Java\\RegexGenerator\\ConsoleRegexTurtle\\src\\it\\units\\inginf\\male\\console\\countries-dataset.json"; // -d
         simpleConfiguration.outputFolder = "."; // -o
         //load simpleconfig defaults
         simpleConfiguration.numberOfJobs = 32; // -j
@@ -69,7 +69,7 @@ public class ConsoleRegexTurtle {
         simpleConfiguration.populateOptionalFields = false;
         simpleConfiguration.isStriped = false;
 
-        parseArgs(args, simpleConfiguration);
+//        parseArgs(args, simpleConfiguration);
 
         try {
             simpleConfiguration.dataset = loadDataset(simpleConfiguration.datasetName);
@@ -117,7 +117,7 @@ public class ConsoleRegexTurtle {
             startTime = System.currentTimeMillis() - startTime;
             config.getPostProcessor().elaborate(config, results, startTime);
         }
-        writeBestPerformances(results.getBestSolution(), config.isIsFlagging());
+        writeBestPerformances(results.getBestSolution());    // config.isIsFlagging()
     }
 
     private static DataSet loadDataset(String dataSetFilename) throws IOException {
@@ -141,54 +141,31 @@ public class ConsoleRegexTurtle {
         return dataset;
     }
 
-    private static void writeBestPerformances(FinalSolution solution, boolean isFlagging) {
+    private static void writeBestPerformances(FinalSolution solution) {
         if (solution != null) {
             System.out.println("Best on learning (JAVA): " + solution.getSolution());
             System.out.println("Best on learning (JS): " + solution.getSolutionJS());
-            if (!isFlagging) {
-                System.out.println("******Stats for Extraction task******");
-                System.out.println("******Stats on training******");
-                System.out.println("F-measure: " + solution.getTrainingPerformances().get("match f-measure"));
-                System.out.println("Precision: " + solution.getTrainingPerformances().get("match precision"));
-                System.out.println("Recall: " + solution.getTrainingPerformances().get("match recall"));
-                System.out.println("Char precision: " + solution.getTrainingPerformances().get("character precision"));
-                System.out.println("Char recall: " + solution.getTrainingPerformances().get("character recall"));
-                System.out.println("******Stats on validation******");
-                System.out.println("F-measure " + solution.getValidationPerformances().get("match f-measure"));
-                System.out.println("Precision: " + solution.getValidationPerformances().get("match precision"));
-                System.out.println("Recall: " + solution.getValidationPerformances().get("match recall"));
-                System.out.println("Char precision: " + solution.getValidationPerformances().get("character precision"));
-                System.out.println("Char recall: " + solution.getValidationPerformances().get("character recall"));
-                System.out.println("******Stats on learning******");
-                System.out.println("F-measure: " + solution.getLearningPerformances().get("match f-measure"));
-                System.out.println("Precision: " + solution.getLearningPerformances().get("match precision"));
-                System.out.println("Recall: " + solution.getLearningPerformances().get("match recall"));
-                System.out.println("Char precision: " + solution.getLearningPerformances().get("character precision"));
-                System.out.println("Char recall: " + solution.getLearningPerformances().get("character recall"));
-            } else {
-                System.out.println("******Stats for Flagging task******");
-                System.out.println("******Stats on training******");
-                System.out.println("Accuracy: " + solution.getTrainingPerformances().get("flag accuracy"));
-                System.out.println("Fpr: " + solution.getTrainingPerformances().get("flag fpr"));
-                System.out.println("Fnr: " + solution.getTrainingPerformances().get("flag fnr"));
-                System.out.println("F-measure: " + solution.getTrainingPerformances().get("flag f-measure"));
-                System.out.println("Precision: " + solution.getTrainingPerformances().get("flag precision"));
-                System.out.println("Recall: " + solution.getTrainingPerformances().get("flag recall"));
-                System.out.println("******Stats on validation******");
-                System.out.println("Accuracy: " + solution.getValidationPerformances().get("flag accuracy"));
-                System.out.println("Fpr: " + solution.getValidationPerformances().get("flag fpr"));
-                System.out.println("Fnr: " + solution.getValidationPerformances().get("flag fnr"));
-                System.out.println("F-measure " + solution.getValidationPerformances().get("flag f-measure"));
-                System.out.println("Precision: " + solution.getValidationPerformances().get("flag precision"));
-                System.out.println("Recall: " + solution.getValidationPerformances().get("flag recall"));
-                System.out.println("******Stats on learning******");
-                System.out.println("Accuracy: " + solution.getLearningPerformances().get("flag accuracy"));
-                System.out.println("Fpr: " + solution.getLearningPerformances().get("flag fpr"));
-                System.out.println("Fnr: " + solution.getLearningPerformances().get("flag fnr"));
-                System.out.println("F-measure: " + solution.getLearningPerformances().get("flag f-measure"));
-                System.out.println("Precision: " + solution.getLearningPerformances().get("flag precision"));
-                System.out.println("Recall: " + solution.getLearningPerformances().get("flag recall"));
-            }
+
+            System.out.println("******Stats for Extraction task******");
+            System.out.println("******Stats on training******");
+            System.out.println("F-measure: " + solution.getTrainingPerformances().get("match f-measure"));
+            System.out.println("Precision: " + solution.getTrainingPerformances().get("match precision"));
+            System.out.println("Recall: " + solution.getTrainingPerformances().get("match recall"));
+            System.out.println("Char precision: " + solution.getTrainingPerformances().get("character precision"));
+            System.out.println("Char recall: " + solution.getTrainingPerformances().get("character recall"));
+            System.out.println("******Stats on validation******");
+            System.out.println("F-measure " + solution.getValidationPerformances().get("match f-measure"));
+            System.out.println("Precision: " + solution.getValidationPerformances().get("match precision"));
+            System.out.println("Recall: " + solution.getValidationPerformances().get("match recall"));
+            System.out.println("Char precision: " + solution.getValidationPerformances().get("character precision"));
+            System.out.println("Char recall: " + solution.getValidationPerformances().get("character recall"));
+            System.out.println("******Stats on learning******");
+            System.out.println("F-measure: " + solution.getLearningPerformances().get("match f-measure"));
+            System.out.println("Precision: " + solution.getLearningPerformances().get("match precision"));
+            System.out.println("Recall: " + solution.getLearningPerformances().get("match recall"));
+            System.out.println("Char precision: " + solution.getLearningPerformances().get("character precision"));
+            System.out.println("Char recall: " + solution.getLearningPerformances().get("character recall"));
+
         }
     }
 
@@ -257,16 +234,7 @@ public class ConsoleRegexTurtle {
                     case "-s":
                         simpleConfig.isStriped = Boolean.valueOf(parameter);
                         break;
-                    case "-f":
-                        simpleConfig.isFlagging = true;
-                        i=i-1; //Do not use parameter
-                        break;
                 }
-            }
-
-            if (simpleConfig.isStriped && simpleConfig.isFlagging) {
-                System.out.println("Striping and flagging cannot be enabled toghether.\n" + HELP_MESSAGE);
-                System.exit(1);
             }
 
             if (mandatoryDatasetCheck) {

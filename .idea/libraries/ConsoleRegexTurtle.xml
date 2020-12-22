@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ConsoleRegexTurtle">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ConsoleRegexTurtle/dist/ConsoleRegexTurtle.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

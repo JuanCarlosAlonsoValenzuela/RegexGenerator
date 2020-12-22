@@ -39,6 +39,7 @@ import java.util.logging.Logger;
 public class SimpleConfig {
     //Maximum unmatch_chars/match_chars ratio
     //and sets the maximum unmatch_chars/match_chars ratio; this value defines the margin size around the matches 
+    transient private final double STRIPING_THREASHOLD_CHAR_RATIO = 200;
     transient private final double STRIPING_DEFAULT_MARGIN_SIZE = 10;
     public int numberThreads;
     public int numberOfJobs;
@@ -47,7 +48,6 @@ public class SimpleConfig {
     public DataSet dataset;
     public boolean populateOptionalFields;
     public boolean isStriped = false;
-    public boolean isFlagging = false;
     
     transient public String datasetName;
     transient public String outputFolder;
@@ -60,7 +60,6 @@ public class SimpleConfig {
     public String comment;
     
     public Configuration buildConfiguration(){
-        assert !(isFlagging&&isStriped);
         
         //
         Configuration configuration = new Configuration();
@@ -95,27 +94,6 @@ public class SimpleConfig {
             datasetContainer.setProposedNormalDatasetInterval(100);//terminationGenerations+50);
         }
         configuration.setDatasetContainer(datasetContainer); //remind that after setting the DataSetContainer.. we need to update configuration in order to invoke datacontainer update methods
-        
-        //FLagging configuration
-        //is an alternative configuration, experimental, that requires changes into the configuration defaults (extractor configuration)
-        //Changes: bestSelector, fitness, terminalset builder configuration mod, population builders(?)
-        configuration.setIsFlagging(isFlagging);
-        if(this.isFlagging){
-            configuration.setStrategy(new MultithreadStrategy());
-            configuration.setBestSelector(new BasicFlaggingLearningBestSelector());
-            configuration.setObjective(new FlaggingAccuracyPrecisionLengthObjective());
-            configuration.setPopulationBuilder(new FlaggingNaivePopulationBuilder()); //disable context generation
-            configuration.setTerminalSetBuilder(new FlaggingNgramsTerminalSetBuilder()); //disable context generation 
-            //TODO change terminalSet to a more naive version?
-            configuration.getTerminalSetBuilderParameters().put("discardWtokens", "false");//Takes significant chars too
-            configuration.getStrategyParameters().put("isFlagging", "true"); //Enable strategy flagging
-            //Remove lookarounds
-            configuration.getOperators().removeAll(
-                    Arrays.asList("it.units.inginf.male.tree.operator.PositiveLookbehind","it.units.inginf.male.tree.operator.NegativeLookbehind",
-                            "it.units.inginf.male.tree.operator.PositiveLookahead", "it.units.inginf.male.tree.operator.NegativeLookahead"));
-        }
-        
-        
         
         configuration.setup(); //initializes datasetcontainer, populationbuilder and terminalsetbuilder
         
