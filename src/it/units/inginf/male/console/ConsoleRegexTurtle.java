@@ -117,7 +117,7 @@ public class ConsoleRegexTurtle {
             startTime = System.currentTimeMillis() - startTime;
             config.getPostProcessor().elaborate(config, results, startTime);
         }
-        writeBestPerformances(results.getBestSolution());    
+        writeBestPerformances(results.getBestSolution());
     }
 
     private static DataSet loadDataset(String dataSetFilename) throws IOException {
