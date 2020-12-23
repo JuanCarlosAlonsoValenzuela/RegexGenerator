@@ -1,0 +1,94 @@
+{
+    "examples": [
+        {
+            "string": "NZL",
+            "match": [],
+            "unmatch": [
+                {
+                    "start": 0,
+                    "end": 3
+                }
+            ]
+        },
+        {
+            "string": "FRO",
+            "match": [],
+            "unmatch": [
+                {
+                    "start": 0,
+                    "end": 3
+                }
+            ]
+        },
+        {
+            "string": "PS",
+            "match": [
+                {
+                    "start": 0,
+                    "end": 2
+                }
+            ],
+            "unmatch": []
+        },
+        {
+            "string": "NAU",
+            "match": [],
+            "unmatch": [
+                {
+                    "start": 0,
+                    "end": 3
+                }
+            ]
+        },
+        {
+            "string": "BRU",
+            "match": [],
+            "unmatch": [
+                {
+                    "start": 0,
+                    "end": 3
+                }
+            ]
+        },
+        {
+            "string": "ZAM",
+            "match": [],
+            "unmatch": [
+                {
+                    "start": 0,
+                    "end": 3
+                }
+            ]
+        },
+        {
+            "string": "PW",
+            "match": [
+                {
+                    "start": 0,
+                    "end": 2
+                }
+            ],
+            "unmatch": []
+        },
+        {
+            "string": "hu",
+            "match": [
+                {
+                    "start": 0,
+                    "end": 2
+                }
+            ],
+            "unmatch": []
+        },
+        {
+            "string": "AE",
+            "match": [
+                {
+                    "start": 0,
+                    "end": 2
+                }
+            ],
+            "unmatch": []
+        }
+    ]
+}
