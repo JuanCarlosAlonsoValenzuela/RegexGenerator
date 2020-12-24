@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MaleRegexTree">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/MaleRegexTree.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

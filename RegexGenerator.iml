@@ -8,5 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="gson-2.2.4" level="project" />
+    <orderEntry type="library" name="MaleRegexTree" level="project" />
+    <orderEntry type="library" name="Random_Regex_Turtle" level="project" />
   </component>
 </module>
