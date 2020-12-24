@@ -58,7 +58,7 @@ public class ConsoleRegexTurtle {
         SimpleConfig simpleConfiguration = new SimpleConfig();
 
         //Set defaults for commandline parameters
-        simpleConfiguration.datasetName = "datasets/countries-dataset-reduced.json"; // -d
+        simpleConfiguration.datasetName = "datasets/countries-dataset.json"; // -d
         simpleConfiguration.outputFolder = "./output"; // -o
         //load simpleconfig defaults
         simpleConfiguration.numberOfJobs = 32; // -j

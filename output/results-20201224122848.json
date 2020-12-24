@@ -1,0 +1,135 @@
+{
+  "methodDescription": "Console config",
+  "experimentDate": "Dec 24, 2020 12:28:35 PM",
+  "bestSolution": {
+    "solutionJS": "\\w\\w",
+    "trainingPerformances": {
+      "character recall": 1.0,
+      "character precision": 1.0,
+      "match precision": 1.0,
+      "character accuracy": 1.0,
+      "match f-measure": 1.0,
+      "match recall": 1.0
+    },
+    "validationPerformances": {
+      "character recall": 1.0,
+      "character precision": 1.0,
+      "match precision": 1.0,
+      "character accuracy": 1.0,
+      "match f-measure": 1.0,
+      "match recall": 1.0
+    },
+    "learningPerformances": {
+      "character recall": 1.0,
+      "character precision": 1.0,
+      "match precision": 1.0,
+      "character accuracy": 1.0,
+      "match f-measure": 1.0,
+      "match recall": 1.0
+    },
+    "solution": "^\\w\\w$",
+    "fitness": [
+      0.0,
+      0.0,
+      6.0
+    ]
+  },
+  "bestExtractions": [
+    [],
+    [],
+    [
+      {
+        "start": 0,
+        "end": 2
+      }
+    ],
+    [],
+    [],
+    [],
+    [
+      {
+        "start": 0,
+        "end": 2
+      }
+    ],
+    [
+      {
+        "start": 0,
+        "end": 2
+      }
+    ],
+    [
+      {
+        "start": 0,
+        "end": 2
+      }
+    ]
+  ],
+  "bestExtractionsStrings": [
+    [],
+    [],
+    [
+      "PS"
+    ],
+    [],
+    [],
+    [],
+    [
+      "PW"
+    ],
+    [
+      "hu"
+    ],
+    [
+      "AE"
+    ]
+  ],
+  "bestExtractionsStats": [
+    {
+      "fp": 0,
+      "tp": 0
+    },
+    {
+      "fp": 0,
+      "tp": 0
+    },
+    {
+      "fp": 0,
+      "tp": 1
+    },
+    {
+      "fp": 0,
+      "tp": 0
+    },
+    {
+      "fp": 0,
+      "tp": 0
+    },
+    {
+      "fp": 0,
+      "tp": 0
+    },
+    {
+      "fp": 0,
+      "tp": 1
+    },
+    {
+      "fp": 0,
+      "tp": 1
+    },
+    {
+      "fp": 0,
+      "tp": 1
+    }
+  ],
+  "overallExecutionTimeMillis": 13263,
+  "numberMatches": 4,
+  "numberUnmatches": 5,
+  "numberMatchedChars": 8,
+  "numberUnmatchedChars": 15,
+  "numberAnnotatedChars": 23,
+  "numberAllChars": 23,
+  "numberTrainingMatches": 2,
+  "numberTrainingUnmatches": 3,
+  "characterEvaluations": 12850500
+}

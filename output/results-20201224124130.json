@@ -1,0 +1,209 @@
+{
+  "methodDescription": "Console config",
+  "experimentDate": "Dec 24, 2020 12:36:19 PM",
+  "bestSolution": {
+    "solutionJS": "\\$(?=([^\\$]*))\\1\\$",
+    "trainingPerformances": {
+      "character recall": 1.0,
+      "character precision": 1.0,
+      "match precision": 1.0,
+      "character accuracy": 1.0,
+      "match f-measure": 1.0,
+      "match recall": 1.0
+    },
+    "validationPerformances": {
+      "character recall": 1.0,
+      "character precision": 1.0,
+      "match precision": 1.0,
+      "character accuracy": 1.0,
+      "match f-measure": 1.0,
+      "match recall": 1.0
+    },
+    "learningPerformances": {
+      "character recall": 1.0,
+      "character precision": 1.0,
+      "match precision": 1.0,
+      "character accuracy": 1.0,
+      "match f-measure": 1.0,
+      "match recall": 1.0
+    },
+    "solution": "\\$[^\\$]*+\\$",
+    "fitness": [
+      0.0,
+      0.0,
+      11.0
+    ]
+  },
+  "bestExtractions": [
+    [
+      {
+        "start": 192,
+        "end": 203
+      },
+      {
+        "start": 208,
+        "end": 222
+      },
+      {
+        "start": 274,
+        "end": 279
+      },
+      {
+        "start": 305,
+        "end": 325
+      },
+      {
+        "start": 401,
+        "end": 460
+      },
+      {
+        "start": 468,
+        "end": 471
+      },
+      {
+        "start": 572,
+        "end": 583
+      },
+      {
+        "start": 631,
+        "end": 636
+      },
+      {
+        "start": 644,
+        "end": 678
+      },
+      {
+        "start": 686,
+        "end": 696
+      },
+      {
+        "start": 698,
+        "end": 708
+      },
+      {
+        "start": 713,
+        "end": 723
+      },
+      {
+        "start": 823,
+        "end": 826
+      }
+    ],
+    [
+      {
+        "start": 230,
+        "end": 233
+      },
+      {
+        "start": 264,
+        "end": 267
+      },
+      {
+        "start": 295,
+        "end": 298
+      },
+      {
+        "start": 317,
+        "end": 320
+      },
+      {
+        "start": 351,
+        "end": 364
+      },
+      {
+        "start": 375,
+        "end": 380
+      },
+      {
+        "start": 386,
+        "end": 390
+      },
+      {
+        "start": 448,
+        "end": 451
+      },
+      {
+        "start": 460,
+        "end": 468
+      },
+      {
+        "start": 484,
+        "end": 487
+      },
+      {
+        "start": 493,
+        "end": 508
+      },
+      {
+        "start": 541,
+        "end": 544
+      },
+      {
+        "start": 549,
+        "end": 553
+      },
+      {
+        "start": 559,
+        "end": 562
+      },
+      {
+        "start": 567,
+        "end": 571
+      }
+    ]
+  ],
+  "bestExtractionsStrings": [
+    [
+      "$\\mu_{A_T}$",
+      "$\\sigma_{A_T}$",
+      "$A_T$",
+      "$\\rho_\\text{filler}$",
+      "$\\rho_\\text{filler}=\\frac{\\sum_{T \\in \\mathcal{T} A_T}}{A}$",
+      "$A$",
+      "$\\mu_{C_T}$",
+      "$C_T$",
+      "$C_T = \\sigma_R+\\sigma_G+\\sigma_B$",
+      "$\\sigma_R$",
+      "$\\sigma_G$",
+      "$\\sigma_B$",
+      "$T$"
+    ],
+    [
+      "$P$",
+      "$R$",
+      "$C$",
+      "$T$",
+      "$\\mathcal{T}$",
+      "$A_T$",
+      "$T'$",
+      "$T$",
+      "$A_{T'}$",
+      "$T$",
+      "$A_{T \\cap T'}$",
+      "$T$",
+      "$T'$",
+      "$n$",
+      "$n'$"
+    ]
+  ],
+  "bestExtractionsStats": [
+    {
+      "fp": 0,
+      "tp": 13
+    },
+    {
+      "fp": 0,
+      "tp": 15
+    }
+  ],
+  "overallExecutionTimeMillis": 310710,
+  "numberMatches": 28,
+  "numberUnmatches": 30,
+  "numberMatchedChars": 272,
+  "numberUnmatchedChars": 1448,
+  "numberAnnotatedChars": 1720,
+  "numberAllChars": 1720,
+  "numberTrainingMatches": 15,
+  "numberTrainingUnmatches": 16,
+  "characterEvaluations": 10528470000
+}

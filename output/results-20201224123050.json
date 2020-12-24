@@ -1,0 +1,65 @@
+{
+  "methodDescription": "Console config",
+  "experimentDate": "Dec 24, 2020 12:30:30 PM",
+  "bestSolution": {
+    "solutionJS": "}}",
+    "trainingPerformances": {
+      "character recall": 0.0,
+      "character precision": "NaN",
+      "match precision": "NaN",
+      "character accuracy": 0.9137737961926092,
+      "match f-measure": "NaN",
+      "match recall": 0.0
+    },
+    "validationPerformances": {
+      "character recall": 0.0,
+      "character precision": "NaN",
+      "match precision": "NaN",
+      "character accuracy": 0.7642079806529625,
+      "match f-measure": "NaN",
+      "match recall": 0.0
+    },
+    "learningPerformances": {
+      "character recall": 0.0,
+      "character precision": "NaN",
+      "match precision": "NaN",
+      "character accuracy": 0.8418604651162791,
+      "match f-measure": "NaN",
+      "match recall": 0.0
+    },
+    "solution": "^}}$",
+    "fitness": [
+      "NaN",
+      100.0,
+      4.0
+    ]
+  },
+  "bestExtractions": [
+    [],
+    []
+  ],
+  "bestExtractionsStrings": [
+    [],
+    []
+  ],
+  "bestExtractionsStats": [
+    {
+      "fp": 0,
+      "tp": 0
+    },
+    {
+      "fp": 0,
+      "tp": 0
+    }
+  ],
+  "overallExecutionTimeMillis": 20477,
+  "numberMatches": 28,
+  "numberUnmatches": 30,
+  "numberMatchedChars": 272,
+  "numberUnmatchedChars": 1448,
+  "numberAnnotatedChars": 1720,
+  "numberAllChars": 1720,
+  "numberTrainingMatches": 15,
+  "numberTrainingUnmatches": 16,
+  "characterEvaluations": 1428800000
+}
